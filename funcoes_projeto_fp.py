@@ -216,10 +216,10 @@ def proficiencia_nivelamento_conteudo():
         arquivo.close()
         treinos = conteudo.split("\n\n")
         encontrados = [treino.strip() for treino in treinos if termo in treino.lower()]       
-        meta = len(treinos-1)
+        meta = len(treinos)
         feito = len(encontrados)
         if encontrados:
-            resultado = (feito / meta)* 100 
+            resultado = (feito / (meta-1))* 100 
             if resultado>=80:
                 print("parabens, o seu nivel é avançado.")
             elif 80>resultado>=50:
