@@ -216,7 +216,7 @@ def proficiencia_nivelamento_conteudo():
         arquivo.close()
         treinos = conteudo.split("\n\n")
         encontrados = [treino.strip() for treino in treinos if termo in treino.lower()]       
-        meta = len(treinos)
+        meta = len(treinos-1)
         feito = len(encontrados)
         if encontrados:
             resultado = (feito / meta)* 100 
